@@ -76,7 +76,15 @@ export default function UserProfileScreen({route, navigation}) {
             Tap outside the red box if you want to keep your account
           </Text>
           <Text style={styles.warningText}>Otherwise, tap DELETE</Text>
-          <Button>DELETE</Button>
+          <Button
+            onPress={() => {
+              Alert.alert(
+                'Ooops!',
+                'This feature is not yet implemented...Sorry.',
+              );
+            }}>
+            DELETE
+          </Button>
         </Modal>
       </Portal>
       <Text style={styles.label}>{user.replace(/['"]+/g, '')}</Text>
