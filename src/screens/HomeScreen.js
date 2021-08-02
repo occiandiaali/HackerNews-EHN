@@ -23,7 +23,6 @@ export default function HomeScreen({route, navigation}) {
 
   let isValid = valid === 1 ? true : false;
 
-  // const isDBLoadingComplete = useDB();
   const isDBLoadingComplete = useDB();
 
   const topstories = 'https://hacker-news.firebaseio.com/v0/topstories.json';
@@ -54,7 +53,7 @@ export default function HomeScreen({route, navigation}) {
     try {
       const response = await fetch(newstories);
       if (response.ok === false) {
-        tconsole.log(`Response Error: ${response}`);
+        console.log(`Response Error: ${response}`);
       }
       const json = await response.json();
       const newPromises = json.map(id =>
@@ -70,7 +69,6 @@ export default function HomeScreen({route, navigation}) {
   };
 
   useEffect(() => {
-    // isValid;
     console.log(`Home mounts, user valid?: ${isValid}`);
     getTopStories();
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -112,23 +112,6 @@ export default function UserAuth({navigation}) {
             }
           },
         ); // mark
-        // txn.executeSql(
-        //   // Add a new account to sql
-        //   `INSERT INTO ${database.tableName} (email, password) VALUES (?, ?)`,
-        //   [email, password],
-        //   (txn, results) => {
-        //     console.log(`Affected rows: ${results.rowsAffected}`);
-        //     if (results.rowsAffected > 0) {
-        //       Alert.alert(
-        //         'Success!',
-        //         `You just registered as ${email}. Tap on the profile icon at the bottom to access more functionality...`,
-        //       );
-        //     } else {
-        //       Alert.alert('Oops!', 'Could not register you! :( ');
-        //       return;
-        //     }
-        //   },
-        // );
       }); // mark 2
 
       flag = 1; // set to indicate user has validation

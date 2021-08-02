@@ -34,7 +34,7 @@ export default function UserProfileScreen({route, navigation}) {
         'DELETE FROM Users WHERE user_id=?',
         [inputUID],
         (tx, results) => {
-          console.log('Results: ', results.rowsAffected);
+          // console.log('Results: ', results.rowsAffected);
           if (results.rowsAffected > 0) {
             Alert.alert(
               'Successful',
@@ -59,7 +59,7 @@ export default function UserProfileScreen({route, navigation}) {
   };
 
   useEffect(() => {
-    console.log(`Received token: ${token}`);
+    // console.log(`Received token: ${token}`);
   }, []);
 
   return (
@@ -118,7 +118,7 @@ export default function UserProfileScreen({route, navigation}) {
             database.closeDB();
             token = 0;
             navigation.navigate('Home', {isFlag: token});
-            console.log(`Sent to home token: ${token}`);
+            // console.log(`Sent to home token: ${token}`);
           }}>
           <List.Item title="Log Out" left={() => <List.Icon icon="logout" />} />
         </TouchableOpacity>
